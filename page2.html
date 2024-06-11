@@ -34,7 +34,7 @@ async function sendLocation(){
       console.log("sending");
       
       if (JSON.parse(localStorage.getItem('00DHs000003V7iM_WEB_STORAGE')).JWT){
-          localToken = JSON.parse(localStorage.getItem('00DHs000003V7iM_WEB_STORAGE'));
+          var localToken = JSON.parse(localStorage.getItem('00DHs000003V7iM_WEB_STORAGE'));
      
            var data = { 
                  "convIdentifier": Object.keys(localToken)[0],
