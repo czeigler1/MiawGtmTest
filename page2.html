@@ -28,7 +28,7 @@
 
 <script>
 document.getElementById("btn").addEventListener("click", sendLocation, false);
-document.getElementById("btn").addEventListener("onEmbeddedMessagingReady", sendLocation, false);
+window.addEventListener("onEmbeddedMessagingReady", sendLocation, false);
 
 async function sendLocation(){
       console.log("sending");
