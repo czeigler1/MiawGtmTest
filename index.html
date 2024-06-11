@@ -19,9 +19,9 @@
     <!-- End Google Tag Manager (noscript) -->
 </body>
 
-<button type="button">Send location.href to Salesforce</button>
+<button type="button" onclick="sendLocation()">Send location.href to Salesforce</button>
 
-sendLocation(){
+function sendLocation(){
       
       localToken = JSON.parse(localStorage.getItem('00DHs000003V7iM_WEB_STORAGE'));
      
