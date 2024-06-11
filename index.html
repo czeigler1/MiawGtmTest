@@ -32,14 +32,15 @@ window.addEventListener("onEmbeddedMessagingReady", sendLocation, false);
 
 async function sendLocation(){
       console.log("sending");
-      localToken = JSON.parse(localStorage.getItem('00DHs000003V7iM_WEB_STORAGE'));
-     
-      var data = { 
-        "convIdentifier": Object.keys(localToken)[0],
-        "msData": window.location.href
-      }
       
       if (JSON.parse(localStorage.getItem('00DHs000003V7iM_WEB_STORAGE')).JWT){
+          localToken = JSON.parse(localStorage.getItem('00DHs000003V7iM_WEB_STORAGE'));
+     
+           var data = { 
+                 "convIdentifier": Object.keys(localToken)[0],
+                 "msData": window.location.href
+           }
+
           const response = await fetch('https://czeigler-240109-1-demo.my.salesforce-sites.com/services/apexrest/messagingPostUserData', {
             method: "POST", 
             mode: "cors", 
@@ -53,6 +54,8 @@ async function sendLocation(){
             body: JSON.stringify(data), 
           });
       }
+      
+      console.log("sent");
 }
 </script>
 
