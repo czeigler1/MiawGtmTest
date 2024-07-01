@@ -1,5 +1,27 @@
 <!DOCTYPE html>
 <html>
+<style>
+    .popup {
+        position: relative;
+      }
+      
+      /* The actual popup */
+      .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+      }
+
+</style>      
 
 <head>
       <!-- Google Tag Manager -->
@@ -19,7 +41,22 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <button onClick= >BUTTON</button>  
+
+    <script>
+          function test(){
+                var z = document.createElement('span');
+                z.id = "myPopup";
+                z.className = "popuptext";
+                z.style.visibility = "visible";
+                z.innerHTML = "Chat Now!";
+                var h = document.getElementsByClassName('embeddedMessagingConversationButtonWrapper');
+                h[0].appendChild(z);
+          }
+    </script>  
+
 </body>
+      
 
 
 
