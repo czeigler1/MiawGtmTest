@@ -62,15 +62,18 @@
                   }
                }
             }, 5000)
+
+            document.getElementById('embeddedMessagingConversationButton').addEventListener('onclick', () => {
+              console.log("TEST1")
+           })
+
+            document.getElementById('myPopup').addEventListener('onclick', () => {
+              console.log("TEST2")
+           })
+            
          })
 
-        document.getElementById('embeddedMessagingConversationButton').addEventListener('onclick', () => {
-           console.log("TEST1")
-        })
 
-       document.getElementById('myPopup').addEventListener('onclick', () => {
-           console.log("TEST2")
-        })
     </script>  
 
 </body>
