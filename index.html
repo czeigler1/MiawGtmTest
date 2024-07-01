@@ -48,17 +48,22 @@
 
     <script>
          window.addEventListener('onEmbeddedMessagingReady', () => {
+            
+            setTimout(controlPass(), 2000)
+         })
+
+         function controlPass(){
             var button = document.getElementById('embeddedMessagingConversationButton');
             if (button){
                console.log('buttonPass');
                if (button.style.display != 'none'){
                   console.log('buttonDisplayPass');
                   var pop = document.getElementById('myPopup');
-                  pop.onclick = embeddedservice_bootstrap.utilAPI.launchChat();
+                  pop.onclick = 'embeddedservice_bootstrap.utilAPI.launchChat()';
                   setTimeout(() => {pop.style.visibility = "visible"}, 3000);
                }
             }
-         })
+         }
        
           var z = document.createElement('span');
           z.id = "myPopup";
