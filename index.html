@@ -51,27 +51,23 @@
     <script>
          window.addEventListener('onEmbeddedMessagingReady', () => {
             setTimeout(() => {
-               var button = document.getElementById('embeddedMessagingConversationButton');
+               let button = document.getElementById('embeddedMessagingConversationButton');
+               button.onclick = close;
                if (button){
                   console.log('button exists');
                   if (button.style.display != 'none'){
                      console.log('button displayed');
-                     var pop = document.getElementById('myPopup');
-                     pop.onclick = embeddedservice_bootstrap.utilAPI.launchChat;
+                     let pop = document.getElementById('myPopup');
                      pop.style.visibility = "visible";
                   }
                }
-            }, 5000)
-
-            document.getElementById('embeddedMessagingConversationButton').addEventListener('onclick', () => {
-              console.log("TEST1")
-           })
-
-            document.getElementById('myPopup').addEventListener('onclick', () => {
-              console.log("TEST2")
-           })
-            
+            }, 5000)      
          })
+
+         function close(){
+            let pop =  document.getElementById('myPopup');
+            pop.style.visibility = "hidden";
+         }
 
 
     </script>  
