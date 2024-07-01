@@ -63,6 +63,16 @@
                }
             }, 5000)
          })
+
+        document.getElementById('embeddedMessagingConversationButton').addEventListener('click', () => {
+           var pop = document.getElementById('myPopup');
+           pop.style.visibility = "hidden";
+        })
+
+       document.getElementById('myPopup').addEventListener('click', () => {
+           var pop = document.getElementById('myPopup');
+           pop.style.visibility = "hidden";
+        })
     </script>  
 
 </body>
