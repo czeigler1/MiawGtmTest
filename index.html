@@ -48,13 +48,10 @@
 
     <script>
          window.addEventListener('onEmbeddedMessagingReady', () => {
-            setTimeout(test, 3000);
+            If (document.getElementById('embeddedMessagingConversationButton').style.display == 'block'){
+               setTimeout(() => {document.getElementById('myPopup')style.visibility = "visible"}, 3000);
+            }
          })
-       
-          function test(){
-                var h = document.getElementById('myPopup');
-                h.style.visibility = "visible"
-          }
        
           var z = document.createElement('span');
           z.id = "myPopup";
