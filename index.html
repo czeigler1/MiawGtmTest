@@ -13,7 +13,7 @@
 
     <style>
     .popup {
-        position: relative;
+        position: absolute;
       }
       
       /* The actual popup */
@@ -48,14 +48,17 @@
 
     <script>
           function test(){
-                var z = document.createElement('span');
-                z.id = "myPopup";
-                z.className = "popuptext";
-                z.style.visibility = "visible";
-                z.innerHTML = "Chat Now!";
-                var h = document.getElementsByClassName('popup');
-                h[0].appendChild(z);
+                var h = document.getElementById('myPopup');
+                h.style.visibility = "visible"
           }
+       
+          var z = document.createElement('span');
+          z.id = "myPopup";
+          z.className = "popuptext";
+          z.style.visibility = "hidden";
+          z.innerHTML = "Chat Now!";
+          var h = document.getElementsByClassName('popup');
+          h[0].appendChild(z);
     </script>  
 
 </body>
