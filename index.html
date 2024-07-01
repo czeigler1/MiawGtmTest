@@ -42,17 +42,18 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div class="popup"></div>
+    <div class="popup">
+       <span class="popuptext" id="myPopup" style.visibility="hidden">Hi. Need help?</span>
+    </div>
 
    </div>
 
     <script>
          window.addEventListener('onEmbeddedMessagingReady', () => {
-            
-            setTimout(controlPass(), 2000)
+            setTimeout(controlCheck, 5000)
          })
 
-         function controlPass(){
+         function controlCheck(){
             var button = document.getElementById('embeddedMessagingConversationButton');
             if (button){
                console.log('buttonPass');
@@ -65,14 +66,7 @@
             }
          }
        
-          var z = document.createElement('span');
-          z.id = "myPopup";
-          z.className = "popuptext";
-          z.style.visibility = "hidden";
-          z.innerHTML = "Hi. Need help?";
-       
-          var h = document.getElementsByClassName('popup');
-          h[0].appendChild(z);
+
     </script>  
 
 </body>
