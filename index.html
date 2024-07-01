@@ -56,12 +56,10 @@
          function controlCheck(){
             var button = document.getElementById('embeddedMessagingConversationButton');
             if (button){
-               console.log('buttonPass');
                if (button.style.display != 'none'){
-                  console.log('buttonDisplayPass');
                   var pop = document.getElementById('myPopup');
-                  pop.onclick = 'embeddedservice_bootstrap.utilAPI.launchChat()';
-                  setTimeout(() => {pop.style.visibility = "visible"}, 3000);
+                  pop.onclick = embeddedservice_bootstrap.utilAPI.launchChat;
+                  pop.style.visibility = "visible";
                }
             }
          }
