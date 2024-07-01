@@ -32,21 +32,6 @@
         margin-left: -80px;
       }
 
-      .popup .popupclose {
-        visibility: hidden;
-        width: 160px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 8px 0;
-        position: fixed;
-        z-index: 1;
-        bottom:35px;
-        right:110px;
-        margin-left: -80px;
-      }
-
     </style>   
 </head>
 
@@ -58,33 +43,24 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div class="popup">
-       <span class="popuptext" id="myPopup" style.visibility="hidden">Hi. Need help?</span>
-       <span class="popupclose" id="myPopupClose" style.visibility="hidden">X</span>
+       <span class="popuptext" id="myPopup">Hi. Need help?</span>
     </div>
 
    </div>
 
     <script>
          window.addEventListener('onEmbeddedMessagingReady', () => {
-            setTimeout(controlCheck, 5000)
-         })
-
-         
-
-         function controlCheck(){
-            var button = document.getElementById('embeddedMessagingConversationButton');
-            if (button){
-               if (button.style.display != 'none'){
-                  var pop = document.getElementById('myPopup');
-                  var popc = document.getElementById('myPopupClose');
-                  pop.onclick = embeddedservice_bootstrap.utilAPI.launchChat;
-                  pop.style.visibility = "visible";
-                  popc.style.visibility = "visible"
+            setTimeout(() => {
+               var button = document.getElementById('embeddedMessagingConversationButton');
+               if (button){
+                  if (button.style.display != 'none'){
+                     var pop = document.getElementById('myPopup');
+                     pop.onclick = embeddedservice_bootstrap.utilAPI.launchChat;
+                     pop.style.visibility = "visible";
+                  }
                }
-            }
-         }
-       
-
+            }, 5000)
+         })
     </script>  
 
 </body>
