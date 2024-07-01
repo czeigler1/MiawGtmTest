@@ -50,6 +50,13 @@
 
     <script>
           function test(){
+                var m = document.createElement('div');
+                m.innerHTML = "CLICK ME"
+                m.className = "popup";
+                m.onclick = "test()";
+                var n = document.getElementsByClassName("embeddedMessagingConversationButtonWrapper") 
+                n.appendChild(m);
+                         
                 var z = document.createElement('span');
                 z.id = "myPopup";
                 z.className = "popuptext";
