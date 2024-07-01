@@ -51,7 +51,7 @@
             var button = document.getElementById('embeddedMessagingConversationButton');
             if (button){
                console.log('buttonPass');
-               if (button.style.display == 'block'){
+               if (button.style.display != 'none'){
                   console.log('buttonDisplayPass');
                   var pop = document.getElementById('myPopup');
                   pop.onclick = embeddedservice_bootstrap.utilAPI.launchChat();
