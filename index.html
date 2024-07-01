@@ -55,6 +55,7 @@
        
           var z = document.createElement('span');
           z.id = "myPopup";
+          z.onclick = embeddedservice_bootstrap.utilAPI.launchChat();
           z.className = "popuptext";
           z.style.visibility = "hidden";
           z.innerHTML = "Hi. Need help?";
