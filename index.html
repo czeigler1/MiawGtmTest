@@ -53,7 +53,9 @@
             setTimeout(() => {
                var button = document.getElementById('embeddedMessagingConversationButton');
                if (button){
+                  console.log('button exists');
                   if (button.style.display != 'none'){
+                     console.log('button displayed');
                      var pop = document.getElementById('myPopup');
                      pop.onclick = embeddedservice_bootstrap.utilAPI.launchChat;
                      pop.style.visibility = "visible";
