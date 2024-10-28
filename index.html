@@ -52,6 +52,7 @@
 
     <script>
          window.addEventListener('onEmbeddedMessagingReady', () => {
+            embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
             setTimeout(() => {
                let button = document.getElementById('embeddedMessagingConversationButton');
                if (button){
